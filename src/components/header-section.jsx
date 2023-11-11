@@ -22,7 +22,7 @@ function HeaderSection() {
             </div>
         </div>
         {/* menu */}
-        <nav className=" hidden md:flex  items-center justify-between">
+        <nav className="absolute  items-center justify-between">
             <div className="flex space-x-4 font-[600] text-[14px]">
             <a href="#" className="hover:text-gray-300">Dashboard</a>
             <a href="#" className="hover:text-gray-300 text-[#2C8EFF]">Training</a>

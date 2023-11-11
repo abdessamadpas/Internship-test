@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="h-full w-full  bg-[#F8FAFD]">
       <HeaderSection/>
-      <div className=' px-2 py-10 w-full sm:px-20 sm:w-full h-full  '>
+      <div className=' px-2 w-full  sm:w-full h-full  '>
         <TrainingSection/>
       </div>
     </div>

@@ -12,6 +12,40 @@ code {
     monospace;
 }
 
+/* width for both vertical and horizontal scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track for both vertical and horizontal scrollbar */
+::-webkit-scrollbar-track {
+  background: #E1EBF0;
+  border-radius: 5px;
+}
+
+/* Handle for vertical scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #2C8EFF;
+  border-radius: 5px;
+}
+
+/* Handle for horizontal scrollbar */
+::-webkit-scrollbar-thumb:horizontal {
+  background: #2C8EFF;
+  border-radius: 5px;
+}
+
+/* Handle on hover for both vertical and horizontal scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: #58a3f9;
+}
+
+/* Handle on hover for horizontal scrollbar */
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background: rgb(122, 183, 254);
+}
+
 
 @tailwind base;
 @tailwind components;
