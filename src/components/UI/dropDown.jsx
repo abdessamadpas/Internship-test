@@ -1,16 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { RiArrowDownSLine } from "react-icons/ri";
 import { RiArrowUpSLine } from "react-icons/ri";
 import security from '../../assets/images/security.png'
-function DropDown({category,addNew, optional,icon}) {
+function DropDown({category,addNew, optional,icon,defaultValue}) {
     const [open, setOpen] = React.useState(false);
-    useEffect(() =>
-        console.log(open)
-    , [open])
-
     const dropdownRef = React.useRef(null);
-
-    useEffect(() => {
+    
+    React.useEffect(() => {
       const handleOutsideClick = (event) => {
         // Close the dropdown only if it's open and the click is outside of it
         if (open && dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -22,7 +18,7 @@ function DropDown({category,addNew, optional,icon}) {
         return () => {
         document.removeEventListener('mousedown', handleOutsideClick);
       };
-    }, [open]); //
+    }, [open]); 
 
     return (
     <div className=' flex flex-col gap-2 w-full '>
@@ -41,7 +37,7 @@ function DropDown({category,addNew, optional,icon}) {
                   {
                     icon && ( <img src= {security} alt='' className='h-4 w-4 md:h-5 md:w-5' /> )
                   }
-                  <p className='text-[9px] md:text-xs '>Safety</p>
+                  <p className='text-[9px] md:text-xs '>{defaultValue}</p>
                 </div>
                 {open ? <RiArrowUpSLine size={20} color='#A4A4A4'/> : <RiArrowDownSLine size={20} color='#A4A4A4'/> 
                 }

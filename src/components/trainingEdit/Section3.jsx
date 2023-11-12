@@ -57,13 +57,13 @@ function Section3() {
         </div>
       </div>
       <div
-        className='absolute top-[50%] translate-x-0 translate-y-[-50%] left-5 bg-white rounded-md p-1 cursor-pointer'
+        className={`absolute top-[50%] translate-x-0 translate-y-[-50%] left-5 bg-white rounded-md p-1 cursor-pointer ${currentCardIndex === 0 ? 'hidden' : ''}`}
         onClick={showPreviousCard}
       >
         <FiChevronLeft size={25} color='#B6B6B6' />
       </div>
       <div
-        className='absolute top-[50%] translate-x-0 translate-y-[-50%] right-5 bg-white rounded-md p-1 cursor-pointer'
+        className={`absolute top-[50%] translate-x-0 translate-y-[-50%] right-5 bg-white rounded-md p-1 cursor-pointer ${currentCardIndex === cards.length - 1 ? 'hidden' : ''}`}
         onClick={showNextCard}
       >
         <FiChevronRight size={25} color='#B6B6B6' />

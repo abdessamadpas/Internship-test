@@ -1,12 +1,55 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import logo  from '../../assets/images/logo.png'
 import english from '../../assets/images/english.png'
 import profile from '../../assets/images/profile.png'
 import { MdNotificationsNone } from "react-icons/md";
 import { MdSearch} from "react-icons/md";
 import { FiMenu, FiX } from "react-icons/fi";
+import ProfileMenu from './profileMenu';
+import LanguageMenu from './languageMenu';
+import NavMenu from './navMenu';
+
 function HeaderSection() {
     const [open, setOpen] = React.useState(false);
+    const [openProfile, setOpenProfile] = React.useState(false);
+    const [openlanguage , setOpenlanguage ] = React.useState(false);
+    React.useEffect(() => {
+        console.log(openProfile);
+    }, [openProfile]);
+    const ProfileRef = useRef(null);
+    const languageRef = useRef(null);
+
+    React.useEffect(() => {
+      const handleOutsideClick = (event) => {
+        if (openProfile && ProfileRef.current && !ProfileRef.current.contains(event.target)) {
+          setOpenProfile(false);
+        }
+      };
+      document.addEventListener('mousedown', handleOutsideClick);
+        return () => {
+        document.removeEventListener('mousedown', handleOutsideClick);
+      };
+    }, [openProfile]); 
+   
+    React.useEffect(() => {
+      const handleOutsideClick = (event) => {
+        if (openlanguage && languageRef.current && !languageRef.current.contains(event.target)) {
+            setOpenlanguage(false);
+        }
+      };
+      document.addEventListener('mousedown', handleOutsideClick);
+        return () => {
+        document.removeEventListener('mousedown', handleOutsideClick);
+      };
+    }, [openlanguage]); 
+
+
+    const handlelanguageClick = () => {
+        setOpenlanguage((prev) => !prev);
+    };
+    const handleProfileClick = () => {
+        setOpenProfile((prev) => !prev);
+    };
   return (
     <header className='flex flex-row items-center justify-around gap-4 px-4 py-3 bg-white shadow-md w-full'>
         {/* logo & search bar */}
@@ -25,39 +68,40 @@ function HeaderSection() {
             </div>
         </div>
         {/* menu */}
-        <nav className=" flex  items-center justify-between">
-            <div className={`md:static  absolute md:min-h-fit bg-white min-h-[40vh] left-0 ${open? "top-[9%]": "top-[-100%]" }  w-full md:w-auto flex items-center px-5 z-50`}>
-                <div className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 space-x-4 font-[600] text-[14px]">
-                    <a href="#" className="hover:text-gray-300">Dashboard</a>
-                    <a href="#" className="hover:text-gray-300 text-[#2C8EFF]">Training</a>
-                    <a href="#" className="hover:text-gray-300">Users</a>
-                    <a href="#" className="hover:text-gray-300">More</a>
-                </div>
-            </div>
-        </nav>
+        <NavMenu open={open} />
         {/* profile & notification & language */}
         <div className=' hidden md:flex items-center justify-between gap-2'>
             <MdNotificationsNone size={20} color='#A4A4A4'/>
-            <img src= {english} className='hidden md:flex' alt='' width={20} />
+            <div className='relative' ref={languageRef}>
+               <img src= {english} className='hidden md:flex' alt='' width={20} onClick={handlelanguageClick}/>
+                {openlanguage && (<LanguageMenu/>)}   
+            </div>
+            
             <div className='flex items-center justify-center  '>
-                <img src= {profile} alt='' width={40} height={40} />
+                <div ref={ProfileRef} className='relative'>
+                    <img src= {profile} alt='' width={40} height={40} onClick={handleProfileClick}/>
+                    {openProfile && (<ProfileMenu/>)}
+                </div>
                 <div className='hidden lg:flex flex-col items-start justify-center'>
                     <span className='text-[13px] w-[80px] font-[600] text-[#6B6B6B]'>Blaise Defloo</span>
                     <span className='text-[11px] font-[500] text-[#9F9F9F]'>Administrator</span>
                 </div>
             </div>
+           
         </div>
+
         {/* mobile menu */}
         <div className='flex md:hidden items-center justify-between gap-2'>
-            <div className='flex items-center justify-center  '>
-                <img src= {profile} alt='' width={40} height={40} />
-            </div>{
+            <div className='flex items-center justify-center' onClick={handleProfileClick}>
+                <div ref={ProfileRef} className='relative'>
+                    <img src= {profile} alt='' width={40} height={40}/>
+                    {openProfile && (<ProfileMenu/>)}
+                </div>
+            </div>
+            {
                 open ? <FiX className=' cursor-pointer' size={20} color='#A4A4A4'onClick={()=>setOpen((prev)=>!prev)}  /> 
                 : <FiMenu  className=' cursor-pointer' size={20} color='#A4A4A4' onClick={()=>setOpen((prev)=>!prev)}/>
             }
-           
-            <img src= {english} className='hidden md:flex' alt='' width={20} />
-            
         </div>
     </header>
   )

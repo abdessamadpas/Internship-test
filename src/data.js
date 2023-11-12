@@ -138,3 +138,31 @@ export const cards =   [
       },
 
 ]
+export const language = [
+  {
+    id: 1,
+    language: "English (US)",
+    icon: "/icons/english.png",
+  },
+  {
+    id: 2,
+    language: "French (FR)",
+    icon: "/icons/france.png",
+  },
+  {
+    id: 3,
+    language: "Netherlands (NL)",
+    icon: "/icons/nederlands.png",
+  },
+  {
+    id: 4,
+    language: "Spain (ES)",
+    icon: "/icons/spain.png",
+  },
+  {
+    id: 5,
+    language: "German (DE)",
+    icon: "/icons/germany.png",
+  },
+];
+
