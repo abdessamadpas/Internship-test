@@ -32,7 +32,7 @@ function Section1() {
                 </div>
                 <DropDown category={'Assign To'} defaultValue={"Internal workers"}/> 
             </div>
-            <div className='grid  grid-cols-[30%,auto] gap-3'>
+            <div className='grid  grid-cols-[35%,auto] gap-3'>
                 <div className='grid  grid-rows-[auto,auto]'>
                     <DropDown category={"Departments"} optional defaultValue={'Select departments'}/> 
                     <DropDown category={"Functions"} optional defaultValue={'Select functions'}/> 
