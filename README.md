@@ -6,33 +6,31 @@
 UI for an assignment app
 
 
-
-## Installation
-
-Provide instructions on how to install this app. Include any dependencies that need to be installed.
-
-\`\`\`bash
 # Clone the repository
+
+```bash
 git clone https://github.com/abdessamadpas/Internship-test.git
-
+```
 # Navigate to the project directory
+
+```bash
 cd Internship-test
-
+```
 # Install dependencies
+```bash
 npm install
-\`\`\`
+```
 
-
-\`\`\`bash
 # Run the app in development mode
+```bash
 npm start
-\`\`\`
+```
 
 ## Folder Structure
 
 Describe the organization of your project's folders and important files.
 
-\`\`\`
+```
 ├── public/
 │   ├── index.html
 │   └── ...
@@ -46,7 +44,7 @@ Describe the organization of your project's folders and important files.
 ├── package.json
 ├── README.md
 └── ...
-\`\`\`
+```
 
 ## Dependencies
 
