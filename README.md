@@ -55,10 +55,3 @@ List the main dependencies used in your project.
 - [antd](https://ant.design/docs/react/introduce/) just for Tooltip
 - [react-icons](https://react-icons.github.io/react-icons) for the icons
 
-
-
-
-
-## Contributing
-
-Provide information on how others can contribute to your project. Include guidelines for submitting issues and pull requests.
