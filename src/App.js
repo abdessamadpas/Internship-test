@@ -4,9 +4,9 @@ import TrainingSection from './components/trainingSection';
 
 function App() {
   return (
-    <div className="h-screen w-full  bg-[#F8FAFD] ">
+    <div className=" flex flex-col justify-center items-center  h-full  w-full  ">
       <HeaderSection/>
-      <div className=' px-2 w-full  sm:w-full h-full  '>
+      <div className=' px-2 w-full sm:w-full h-full flex justify-center items-center    '>
         <TrainingSection/>
       </div>
     </div>

@@ -51,7 +51,8 @@ function HeaderSection() {
         setOpenProfile((prev) => !prev);
     };
   return (
-    <header className='flex flex-row items-center justify-around gap-4 px-4 py-3 bg-white shadow-md w-full'>
+    <div className='flex flex-row items-center justify-around  bg-white  shadow-md w-full '>
+       <header className='flex flex-row items-center justify-around gap-4 px-4 py-3 w-full max-w-[1700px]'>
         {/* logo & search bar */}
         <div className='flex  items-center gap-10 '>
                 <img src= {logo} alt='' className='w-16 h-8 md:w-24 md:h-10' />
@@ -104,6 +105,8 @@ function HeaderSection() {
             }
         </div>
     </header>
+    </div>
+   
   )
 }
 

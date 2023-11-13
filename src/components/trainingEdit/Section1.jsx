@@ -1,5 +1,4 @@
 import React from 'react'
-import security from '../../assets/images/security.png'
 import DropDown from '../UI/dropDown'
 import {FiTrash} from "react-icons/fi";
 import upload from '../../assets/images/upload.png'
@@ -9,21 +8,21 @@ function Section1() {
     <div className='grid grid-flow-row-dense  grid-cols-6  gap-4 justify-around w-full'>
         {/* left section */}    
         <div className='col-span-6 md:col-span-4 lg:col-span-3 grid grid-rows-[auto, auto,auto] gap-3 border-[#FFFFFF] border-2 p-3 rounded-lg bg-white shadow-md '>
-            <div className='grid grid-cols-[30%,auto,20%] w-full  gap-3'>
-                <DropDown category={"Category"} addNew icon defaultValue={"Safety"}/> 
-                <DropDown category={"Topic"} addNew icon defaultValue={"VCA"}/> 
+            <div className='grid grid-cols-1 sm:grid-cols-[30%,auto,20%] w-full gap-3'>
+                <DropDown category={"Category"} addNew icon={'/icons/safety.png'} defaultValue={"Safety"}/> 
+                <DropDown category={"Topic"} addNew icon={'/icons/vca.png'} defaultValue={"VCA"}/> 
                 <DropDown category={"Valid For"} defaultValue={"1 year"}/> 
             </div>
-            <div className='grid  grid-cols-[65%,auto] w-full  gap-3 '>
+            <div className='grid grid-cols-1 sm:grid-cols-[65%,auto] w-full  gap-3 '>
                 <div className=' flex flex-col gap-2 w-full '>
                     <div className='flex items-center justify-between'>
-                        <p className='text-[9px] md:text-[12px] font-[600] text-[#616161]'>Training</p>
+                        <p className=' text-[12px] font-[600] text-[#616161]'>Training</p>
                     </div>
                     <div lassName='relative flex flex-col items-center w-full'>
-                        <div className=' w-full flex items-center justify-between text-[12px] font-[600] md:px-4 px-2 md:py-2 py-1 rounded-[5px] tracking-wider border-[#DCDCDC]  border-[1px] active:border-[#616161] duration-300'>
-                            <p className='text-[9px] md:text-xs '>Working at height</p>
+                        <div className=' w-full flex items-center justify-between text-[12px] font-[600]  px-4  py-2 rounded-[5px] tracking-wider border-[#DCDCDC]  border-[1px] active:border-[#616161] duration-300'>
+                            <p className='text-xs '>Working at height</p>
                             <div className='flex gap-2 items-center'>
-                                <img src= {security} alt='' className='h-4 w-4 md:h-5 md:w-5' />
+                                <img src= {process.env.PUBLIC_URL + '/icons/vca.png'} alt='' className='h-5 w-5' />
                                 <FiTrash size={15} color='red'/>
                             </div>
                         </div>
@@ -32,14 +31,14 @@ function Section1() {
                 </div>
                 <DropDown category={'Assign To'} defaultValue={"Internal workers"}/> 
             </div>
-            <div className='grid  grid-cols-[35%,auto] gap-3'>
+            <div className='grid  sm:grid-cols-[35%,auto] gap-3'>
                 <div className='grid  grid-rows-[auto,auto]'>
                     <DropDown category={"Departments"} optional defaultValue={'Select departments'}/> 
                     <DropDown category={"Functions"} optional defaultValue={'Select functions'}/> 
                 </div>
                 <div className='grid  grid-rows-[auto,auto] '>
                     <label className='text-[#7C7C7C] text-[12px] font-[600] leading-5 '>Description</label>
-                    <textarea placeholder='Type here' rows="5" cols="50" className=' h-full overflow-auto border-[#DCDCDC] rounded-[5px] border-2 '></textarea>
+                    <textarea placeholder='Type here..' rows="5" cols="1" className=' h-full w-full overflow-auto border-[#DCDCDC] rounded-[5px] border-2 '></textarea>
                 </div>
             </div>
         </div>
