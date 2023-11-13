@@ -9,7 +9,7 @@ import ProfileMenu from './profileMenu';
 import LanguageMenu from './languageMenu';
 import NavMenu from './navMenu';
 
-function HeaderSection() {
+function HeaderSection({language}) {
     const [open, setOpen] = React.useState(false);
     const [openProfile, setOpenProfile] = React.useState(false);
     const [openlanguage , setOpenlanguage ] = React.useState(false);
@@ -73,7 +73,7 @@ function HeaderSection() {
             <MdNotificationsNone size={20} color='#A4A4A4'/>
             <div className='relative' ref={languageRef}>
                <img src= {english} className='hidden md:flex' alt='' width={20} onClick={handlelanguageClick}/>
-                {openlanguage && (<LanguageMenu/>)}   
+                {openlanguage && (<LanguageMenu language={language}/>)}   
             </div>
             
             <div className='flex items-center justify-center  '>

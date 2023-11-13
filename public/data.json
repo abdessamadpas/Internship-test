@@ -1,4 +1,4 @@
-export const cards =   [
+{ "cards" :   [
     {
       "id": 1,
       "iconSrc": "/icons/dice.png",
@@ -135,34 +135,35 @@ export const cards =   [
         "defaultValue": 10,
         "description": "The system will randomly select questions from the question bank",
         "counterType": ""
-      },
+      }
 
+],
+"language" :[
+  {
+    "id": 1,
+    "language": "English (US)",
+    "icon": "/icons/english.png"
+  },
+  {
+    "id": 2,
+    "language": "French (FR)",
+    "icon": "/icons/france.png"
+  },
+  {
+    "id": 3,
+    "language": "Netherlands (NL)",
+    "icon": "/icons/nederlands.png"
+  },
+  {
+    "id": 4,
+    "language": "Spain (ES)",
+    "icon": "/icons/spain.png"
+  },
+  {
+    "id": 5,
+    "language": "German (DE)",
+    "icon": "/icons/germany.png"
+  }
 ]
-export const language = [
-  {
-    id: 1,
-    language: "English (US)",
-    icon: "/icons/english.png",
-  },
-  {
-    id: 2,
-    language: "French (FR)",
-    icon: "/icons/france.png",
-  },
-  {
-    id: 3,
-    language: "Netherlands (NL)",
-    icon: "/icons/nederlands.png",
-  },
-  {
-    id: 4,
-    language: "Spain (ES)",
-    icon: "/icons/spain.png",
-  },
-  {
-    id: 5,
-    language: "German (DE)",
-    icon: "/icons/germany.png",
-  },
-];
 
+}

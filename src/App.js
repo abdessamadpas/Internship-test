@@ -1,15 +1,29 @@
+import React from 'react';
 import './App.css';
-import HeaderSection from './components/header/header-section';
-import TrainingSection from './components/trainingSection';
+const MainLazy = React.lazy(()=>import('./pages/mainPage'));
 
 function App() {
+
+  const [data, setData] = React.useState([]);
+  
+  React.useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const res = await fetch("/data.json"); // Change the URL to point to the root
+        const data = await res.json();
+        setData(data);
+        
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+  fetchItems();
+  }, []);
+
   return (
-    <div className=" flex flex-col justify-center items-center  h-full  w-full  ">
-      <HeaderSection/>
-      <div className=' px-2 w-full sm:w-full h-full flex justify-center items-center    '>
-        <TrainingSection/>
-      </div>
-    </div>
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <MainLazy data={data}/>
+      </React.Suspense>
   );
 }
 

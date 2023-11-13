@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Card from '../UI/card';
-import { cards } from '../../data';
 
-function Section3() {
+function Section3({cards}) {
+
+
+
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const containerRef = useRef(null);
 
