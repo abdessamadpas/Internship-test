@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-      <React.Suspense fallback={<div>Loading...</div>}>
+      <React.Suspense fallback={<div className=' flex justify-center items-center w-screen h-screen'>Loading...</div>}>
         <MainLazy data={data}/>
       </React.Suspense>
   );
