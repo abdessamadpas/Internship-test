@@ -9,7 +9,6 @@ function Section3() {
 
   const showPreviousCard = () => {
     const container = containerRef.current;
-    const cardWidth = container.clientWidth / cards.length;
     const newScrollLeft = container.scrollLeft - container.clientWidth;
     container.scrollTo({
       left: newScrollLeft,
@@ -20,7 +19,6 @@ function Section3() {
 
   const showNextCard = () => {
     const container = containerRef.current;
-    const cardWidth = container.clientWidth / cards.length;
     const newScrollLeft = container.scrollLeft + container.clientWidth;
     container.scrollTo({
       left: newScrollLeft,

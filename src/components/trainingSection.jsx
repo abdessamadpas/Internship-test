@@ -7,7 +7,7 @@ import Section3 from './trainingEdit/Section3';
 function TrainingSection() {
 
   return (
-    <div className='w-full h-full max-w-[1350px]'>
+    <div className='w-full h-full max-w-[1400px]'>
         <div className='px-3 md:px-11 lg:px-20 flex flex-col items-center py-10 justify-center gap-3'>
             <HeaderTraining/>
             <Section1/>     

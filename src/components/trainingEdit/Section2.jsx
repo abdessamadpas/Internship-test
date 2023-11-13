@@ -5,7 +5,7 @@ function Section2() {
     const [questions, setQuestions] = React.useState([{}]);
 
     const addQuestion = () => {
-        setQuestions([...questions, {   }]);
+        setQuestions([...questions, {}]);
     };
 
     return (
