@@ -45,11 +45,15 @@ function DropDown({category,addNew, optional, icon, defaultValue}) {
                 open && (
                     <ul className='absolute bg-slate-100 flex flex-col top-10 rounded-lg z-10 w-full  items-start px-4 py-1 gap-4	'>
                       <li className=' hover:text-gray-300 flex gap-2'>
-                        <img src= {process.env.PUBLIC_URL + icon} alt='' className='h-5 w-5' />
+                      {
+                        icon && ( <img src= {process.env.PUBLIC_URL + icon} alt='' className='h-5 w-5' /> )
+                      }
                         <h3 className='text-xs '>wewe 3</h3>
                       </li>
                       <li className='hover:text-gray-300 flex gap-2'>
-                        <img src= {process.env.PUBLIC_URL + icon} alt='' className='h-5 w-5' />
+                        {
+                        icon && ( <img src= {process.env.PUBLIC_URL + icon} alt='' className='h-5 w-5' /> )
+                      }
                         <h3 className='text-xs '>wewe 3</h3>
                       </li>
                     </ul>

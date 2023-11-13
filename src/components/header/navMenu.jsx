@@ -1,4 +1,5 @@
 import React from 'react'
+import { RiArrowDownSLine } from "react-icons/ri";
 
 function NavMenu({open}) {
   
@@ -9,7 +10,11 @@ function NavMenu({open}) {
                 <li className="hover:text-gray-300 text-[#B6B6B6]  cursor-default">Dashboard</li>
                 <li className="hover:text-gray-300 text-[#2C8EFF]  cursor-default">Training</li>
                 <li className="hover:text-gray-300 text-[#B6B6B6] cursor-default">Users</li>
-                <li className="hover:text-gray-300 text-[#B6B6B6] cursor-default">More</li>
+                <li className="hover:text-gray-300 text-[#B6B6B6] cursor-default flex gap-2 items-end justify-end">
+                  <p>More</p>
+                  <RiArrowDownSLine size={20} className=' top-3 '/>
+
+                </li>
             </ul>
         </div>
     </nav>
