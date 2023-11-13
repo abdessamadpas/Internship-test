@@ -13,9 +13,7 @@ function HeaderSection() {
     const [open, setOpen] = React.useState(false);
     const [openProfile, setOpenProfile] = React.useState(false);
     const [openlanguage , setOpenlanguage ] = React.useState(false);
-    React.useEffect(() => {
-        console.log(openProfile);
-    }, [openProfile]);
+
     const ProfileRef = useRef(null);
     const languageRef = useRef(null);
 

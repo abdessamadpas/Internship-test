@@ -18,7 +18,7 @@ function Section1() {
                     <div className='flex items-center justify-between'>
                         <p className=' text-[12px] font-[600] text-[#616161]'>Training</p>
                     </div>
-                    <div lassName='relative flex flex-col items-center w-full'>
+                    <div className='relative flex flex-col items-center w-full'>
                         <div className=' w-full flex items-center justify-between text-[12px] font-[600]  px-4  py-2 rounded-[5px] tracking-wider border-[#DCDCDC]  border-[1px] active:border-[#616161] duration-300'>
                             <p className='text-xs '>Working at height</p>
                             <div className='flex gap-2 items-center'>
@@ -70,10 +70,10 @@ function Section1() {
                 <div className=''></div>
             </div>
             <p className='text-[11px] font-[600] text-[#B4B4B4]'>*Only Video, PDF and SlideShow files are allowed.</p>
-            <div class="flex items-center my-1">
-                <div class="border-t flex-grow"></div>
-                <span class="mx-2 text-[11px] text-[#AAAAAA]">Or</span>
-                <div class="border-t flex-grow"></div>
+            <div className="flex items-center my-1">
+                <div className="border-t flex-grow"></div>
+                <span className="mx-2 text-[11px] text-[#AAAAAA]">Or</span>
+                <div className="border-t flex-grow"></div>
             </div>
             <div className='flex flex-col gap-2 items-center'>
                 <p className='text-[13px] font-[600] text-[#616161] w-full text-start'> Media URL</p>

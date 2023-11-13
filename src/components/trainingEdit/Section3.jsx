@@ -35,6 +35,7 @@ function Section3() {
     const newCardIndex = Math.round(container.scrollLeft / cardWidth);
     setCurrentCardIndex(newCardIndex);
   };
+  
 
   return (
     <div className='w-full px-1 relative sm:px-20 pb-3'>
@@ -49,7 +50,7 @@ function Section3() {
               key={index}
               defaultValue={element.defaultValue}
               body={element.bodyText}
-              iconSrc={element.iconSrc}
+              icon={element.iconSrc}
               description={element.description}
               counterType={element.counterType}
             />
